@@ -3,7 +3,7 @@ FROM minio/mc as tester
 COPY create_backup.sh test_backup.sh upload_backup.sh /
 RUN /test_backup.sh
 
-FROM tkislan/rpi-mc as mc
+FROM tkislan/rpi-hass-docker-images:mc-latest as mc
 
 FROM armhf/alpine:latest
 WORKDIR /root/
