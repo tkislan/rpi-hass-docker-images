@@ -5,7 +5,7 @@ RUN /test_backup.sh
 
 FROM tkislan/rpi-hass-docker-images:mc-latest as mc
 
-FROM armhf/alpine:latest
+FROM arm32v6/alpine:3.8
 WORKDIR /root/
 
 COPY --from=mc /usr/bin/mc /usr/bin/mc

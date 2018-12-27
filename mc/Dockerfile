@@ -10,7 +10,7 @@ RUN chmod +x /usr/bin/mc
 
 RUN ["cross-build-end"]
 
-FROM armhf/alpine:latest
+FROM arm32v6/alpine:3.8
 WORKDIR /root/
 
 COPY --from=builder /usr/bin/mc /usr/bin/mc
